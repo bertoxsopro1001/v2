@@ -1,0 +1,19 @@
+<h1>Recommended Jobs</h1>
+
+<% if @recommended_jobs.present? %>
+  <ul>
+    <% @recommended_jobs.each do |job| %>
+      <li>
+        <strong>Title:</strong> <%= job['title'] %><br>
+        <strong>Salary:</strong> <%= job['salary'] %><br>
+        <strong>Personality:</strong> <%= job['personality'] %><br>
+        <strong>Work Experience:</strong> <%= job['work_experience'] %> years<br>
+        <strong>Work Hours:</strong> <%= job['work_hours'] %> hours/week<br>
+        <strong>Skills:</strong> <%= job['skills'] %><br>
+        <strong>Accuracy Percentage:</strong> <%= job['accuracy_percentage'].to_f.round(2) %>%
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No recommended jobs found.</p>
+<% end %>

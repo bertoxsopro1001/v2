@@ -1,0 +1,28 @@
+<%= form_with url: recommend_jobs_path, method: :post, local: true do |form| %>
+  <div class="field">
+    <%= form.label :personality %>
+    <%= form.text_field :personality, required: true, placeholder: 'e.g., Extroverted, Analytical' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_experience %>
+    <%= form.text_field :work_experience, required: true, placeholder: 'e.g., 2-5 years' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :work_hours %>
+    <%= form.text_field :work_hours, required: true, placeholder: 'e.g., 20-40 hours' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary, required: true, placeholder: 'e.g., 50000-70000' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skills %>
+    <%= form.text_field :skills, required: true, placeholder: 'e.g., Python, Data Analysis' %>
+  </div>
+
+  <%= form.submit 'Recommend Jobs' %>
+<% end %>
